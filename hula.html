@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="assets/js/jquery-3.7.1.min.js"></script>
+    <style>
+        .loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <h1>HULALA</h1>
+   <input type="text" placeholder="Enter Fullname">
+   <button id="generate">Generate</button>
+   <br>
+   <h1 id="display" style="display: none"></h1>
+   <div class="loading">Generate...</div>
+   <script type="text/javascript">
+      // $('#generate').on('click', function (e) {
+      //     const compatibilityPercentage = Math.floor(Math.random() * 101); // Generate a random percentage between 0 and 100
+
+      //     $(".loading").show(); // Show loading text
+      //     $("#display").hide(); // Hide previous prediction
+      //     setTimeout(function () {
+      //         $(".loading").hide(); // Hide loading text after a delay
+      //         $("#display").text("");
+      //         $("#display").show(500); // Show prediction with animation
+      //         $("#display").text(`The compatibility between ${$("#name1").val()} and ${$("#name2").val()} is ${compatibilityPercentage}%`);
+      //     }, 2000); // Adjust the delay time as needed
+      // });
+
+      $('#generate').on('click',function (e) {
+        var hula = [
+              "Makabuntis/Mabuntis Ka",
+              "Madatu ka",
+              "Mahagbung ka ani nga subject",
+              "Makapasar ka",
+              "Kabit Ka",
+          ];
+
+
+        const random = Math.floor(Math.random() * hula.length);
+
+          $(".loading").show(); // Show loading text
+          $("#display").hide(); // Hide previous prediction
+          setTimeout(function() {
+              $(".loading").hide(); // Hide loading text after a delay
+              $("#display").text("");
+              $("#display").show(500); // Show prediction with animation
+              $("#display").text(hula[random]);
+          }, 2000); // Adjust the delay time as needed
+      })
+   </script>
+</body>
+</html>
